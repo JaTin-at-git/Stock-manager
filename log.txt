@@ -1,0 +1,1 @@
+decreaseStock, 19, item 1, , 1, 2, 3

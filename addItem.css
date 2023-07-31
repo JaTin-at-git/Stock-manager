@@ -1,0 +1,135 @@
+.addItemForm{
+    border: 1px solid black;
+    width: calc(min(400px,100vw) - 20px);
+    /*width: 400px;*/
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    background-color: white;
+}
+
+.formElement{
+    display: grid;
+    grid-template-columns: 1fr 1fr .3fr;
+    justify-items: end;
+    align-items: center;
+    padding: 3px;
+    font-size: 1.5rem;
+}
+
+.addItemHeader{
+    position: relative;
+}
+
+.addItemHeader .cancel{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.formElement:nth-of-type(3),
+.formElement:nth-of-type(5),
+.formElement:nth-of-type(7){
+    margin-bottom: 2ch;
+}
+
+.formElement:nth-of-type(1){
+    border-bottom: 1px solid grey;
+    margin-bottom: 3ch;
+}
+
+.formElement:nth-of-type(1),
+.formElement:nth-of-type(7){
+    display: block;
+    font-size: 1rem;
+    margin: 0 2ch 5ch;
+}
+
+.formElement:nth-of-type(7) {
+    margin: 3ch;
+}
+
+.formElement:nth-of-type(8){
+    border-top: 1px solid black;
+    padding-top: 2ch;
+    grid-template-areas: "cancelBtn saveBtn";
+}
+
+label{
+    margin-right: 1ch;
+    font-weight: 500;
+}
+
+input{
+    width: 15ch;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 3px 7px;
+    justify-self: start;
+}
+
+
+.formElement.addItemHeader h2{
+    margin: 0;
+    justify-self: flex-start;
+    font-size: 3rem;
+}
+
+button.cancel, #saveAddItem{
+    font-size: 1.5rem;
+    padding: 1ch 3ch;
+}
+
+#saveAddItem{
+    /*color: darkgreen;*/
+    /*font-weight: bold;*/
+}
+
+#close {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    padding: 0;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background: transparent;
+    color: black;
+    font: inherit;
+    text-indent: 100%;
+    cursor: pointer;
+}
+#close:focus {
+    outline: solid 0 transparent;
+    box-shadow: 0 0 0 2px #8ed0f9;
+}
+#close:hover {
+    background: rgba(29, 161, 142, 0.1);
+}
+#close:before, #close:after {
+    position: absolute;
+    top: 15%;
+    left: calc(50% - .0625em);
+    width: 0.125em;
+    height: 70%;
+    border-radius: 0.125em;
+    transform: rotate(45deg);
+    background: currentcolor;
+    content: "";
+}
+#close:after {
+    transform: rotate(-45deg);
+}
+
+#saveAddItem{
+    grid-area: saveBtn;
+}
+
+.btn.cancel {
+    grid-area: cancelBtn;
+}

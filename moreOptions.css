@@ -1,0 +1,32 @@
+.moreOptionsActualOptions{
+    display: flex;
+    flex-direction: column;
+}
+
+.moreOptionsElement{
+    border-bottom: 1px dashed lightgrey;
+}
+
+.deleteItAsk{
+    color: red;
+}
+
+.deleteItConfirm{
+    margin-left: 10px;
+    height: 0;
+    overflow: hidden;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+.deleteBtns{
+    margin-top: 0;
+    padding: 1rem 2rem !important;
+}
+
+#deleteItCheckbox:checked~.deleteItConfirm{
+    transition-property: all;
+    transition-duration: .1s;
+    height: 100%;
+    transform: scaleY(1);
+}

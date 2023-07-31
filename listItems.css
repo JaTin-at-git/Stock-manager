@@ -1,0 +1,107 @@
+
+.listItems_main {
+    width: 100%;
+    height: calc(100vh - 32em - 5px);
+    /*background-color: white;*/
+    border-radius: 15px;
+    overflow: scroll;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 20px 8px 0px;
+    /*border-bottom: 2px solid black;*/
+}
+
+.listItems_main::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.item {
+    border-radius: 5px;
+    padding: 10px 10px 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    font-size: 12px;
+    margin: 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.item *{
+    text-transform: capitalize;
+}
+
+.itemPart1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-right: 1px dashed grey;
+}
+
+.itemName {
+    font-size: large;
+    font-weight: bold;
+}
+
+.itemOtherName {
+    max-width: 18ch;
+    color: #6d6d6d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 12px;
+}
+
+.stock {
+    font-size: 1.3rem;
+}
+
+.stockQuantity{
+    color: red;
+    font-weight: bold;
+}
+
+.addStock {
+    text-decoration: underline;
+    user-select: none;
+}
+
+.itemPart2 {
+    position: relative;
+}
+
+.soldAtDefault, .soldAtOther {
+    border: 1px solid black !important;
+    display: block !important;
+    width: 20ch;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin: 1rem;
+    font-size: 1.2rem !important;
+}
+
+.soldAtDefault{
+    background-color: rgba(152, 251, 152, 0.2) !important;
+}
+
+.moreOptions {
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#loadMore{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+#itemID, #itemCP{
+    display: none;
+}
+
