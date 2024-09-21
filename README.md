@@ -1,2 +1,3 @@
 # Stock-manager
-this is a project i recently created
+
+Helped monitoring stock of various goods in my stationary shop. 
